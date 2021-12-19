@@ -1,0 +1,1 @@
+static unsigned char CONFIG_BUFFER[2000] = "{\"Hostname\":\"Please\", \"Migrate\":\"Subscribe\"}";
