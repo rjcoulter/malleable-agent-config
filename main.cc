@@ -2,7 +2,10 @@
 #include "config.h"
 #include "json.hpp"
 
+CONFIG* Conf = new CONFIG;
+
 int main() {
-    nlohmann::json j = nlohmann::json::parse(CONFIG_BUFFER);
-    std::cout << CONFIG_BUFFER;
+    std::string res((char*) CONFIG_BUFFER);
+    config_initialize(Conf, res);
+    std::cout << Conf->Hostname << " " << Conf->Migrate;
 }
